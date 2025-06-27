@@ -1,0 +1,204 @@
+{
+  "research_agent": {
+    "model": "claude-3-sonnet",
+    "temperature": 0.1,
+    "max_tokens": 4000,
+    "tools": [
+      "web_search",
+      "pdf_reader", 
+      "code_analysis",
+      "repository_analysis"
+    ],
+    "capabilities": [
+      "paper_analysis",
+      "github_exploration",
+      "requirement_extraction",
+      "feasibility_assessment"
+    ],
+    "quality_settings": {
+      "fast": {
+        "analysis_depth": "basic",
+        "requirement_detail": "minimal"
+      },
+      "balanced": {
+        "analysis_depth": "standard",
+        "requirement_detail": "comprehensive"
+      },
+      "high": {
+        "analysis_depth": "thorough",
+        "requirement_detail": "detailed"
+      }
+    }
+  },
+  
+  "devops_agent": {
+    "model": "claude-3-sonnet",
+    "temperature": 0.0,
+    "max_tokens": 2000,
+    "tools": [
+      "shell_commands",
+      "file_operations",
+      "package_management",
+      "environment_setup"
+    ],
+    "capabilities": [
+      "repository_cloning",
+      "dependency_installation",
+      "environment_configuration",
+      "build_system_setup"
+    ],
+    "quality_settings": {
+      "fast": {
+        "validation_level": "basic",
+        "setup_completeness": "minimal"
+      },
+      "balanced": {
+        "validation_level": "standard",
+        "setup_completeness": "comprehensive"
+      },
+      "high": {
+        "validation_level": "thorough",
+        "setup_completeness": "complete"
+      }
+    }
+  },
+  
+  "coding_agent": {
+    "model": "claude-3-sonnet",
+    "temperature": 0.2,
+    "max_tokens": 6000,
+    "tools": [
+      "code_generation",
+      "file_editing",
+      "syntax_validation",
+      "comfyui_integration"
+    ],
+    "capabilities": [
+      "node_implementation",
+      "utility_functions",
+      "error_handling",
+      "performance_optimization"
+    ],
+    "quality_settings": {
+      "fast": {
+        "code_complexity": "basic",
+        "error_handling": "minimal",
+        "optimization": "none"
+      },
+      "balanced": {
+        "code_complexity": "standard",
+        "error_handling": "comprehensive",
+        "optimization": "basic"
+      },
+      "high": {
+        "code_complexity": "advanced",
+        "error_handling": "robust",
+        "optimization": "thorough"
+      }
+    }
+  },
+  
+  "testing_agent": {
+    "model": "claude-3-sonnet",
+    "temperature": 0.0,
+    "max_tokens": 3000,
+    "tools": [
+      "test_execution",
+      "validation",
+      "performance_analysis",
+      "quality_assessment"
+    ],
+    "capabilities": [
+      "unit_testing",
+      "integration_testing",
+      "performance_benchmarking",
+      "quality_validation"
+    ],
+    "quality_settings": {
+      "fast": {
+        "test_coverage": "basic",
+        "validation_depth": "minimal"
+      },
+      "balanced": {
+        "test_coverage": "standard",
+        "validation_depth": "comprehensive"
+      },
+      "high": {
+        "test_coverage": "thorough",
+        "validation_depth": "exhaustive"
+      }
+    }
+  },
+  
+  "documentation_agent": {
+    "model": "claude-3-sonnet",
+    "temperature": 0.1,
+    "max_tokens": 4000,
+    "tools": [
+      "documentation_generation",
+      "package_creation",
+      "example_workflows",
+      "markdown_formatting"
+    ],
+    "capabilities": [
+      "readme_creation",
+      "api_documentation",
+      "installation_guides",
+      "example_generation"
+    ],
+    "quality_settings": {
+      "fast": {
+        "documentation_depth": "basic",
+        "example_count": "minimal"
+      },
+      "balanced": {
+        "documentation_depth": "comprehensive",
+        "example_count": "standard"
+      },
+      "high": {
+        "documentation_depth": "exhaustive",
+        "example_count": "extensive"
+      }
+    }
+  },
+  
+  "framework_settings": {
+    "output_structure": {
+      "nodes_directory": "nodes",
+      "docs_directory": "docs",
+      "examples_directory": "examples", 
+      "tests_directory": "tests",
+      "logs_directory": "logs",
+      "artifacts_directory": "artifacts"
+    },
+    
+    "quality_standards": {
+      "min_test_coverage": 85,
+      "max_complexity": 10,
+      "documentation_completeness": 90,
+      "performance_threshold": 1000
+    },
+    
+    "comfyui_compliance": {
+      "node_standards": true,
+      "type_system": true,
+      "error_handling": true,
+      "performance_optimization": true,
+      "documentation_requirements": true
+    },
+    
+    "validation_rules": {
+      "syntax_validation": true,
+      "import_validation": true,
+      "structure_validation": true,
+      "functionality_validation": true
+    },
+    
+    "pipeline_settings": {
+      "parallel_execution": false,
+      "error_tolerance": "medium",
+      "retry_attempts": 3,
+      "timeout_seconds": 3600
+    }
+  }
+}

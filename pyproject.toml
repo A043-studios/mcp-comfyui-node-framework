@@ -1,0 +1,177 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-comfyui-framework"
+version = "1.0.0"
+description = "Automated ComfyUI node development using AI agents and the Model Context Protocol (MCP)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "A043 Studios", email = "contact@a043studios.com"}
+]
+maintainers = [
+    {name = "A043 Studios", email = "contact@a043studios.com"}
+]
+keywords = [
+    "mcp",
+    "multi-agent",
+    "comfyui",
+    "ai-automation",
+    "code-generation",
+    "research-to-code",
+    "node-development",
+    "framework"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.28.0",
+    "pathlib>=1.0.1",
+    "typing-extensions>=4.0.0",
+    "PyPDF2>=3.0.0",
+    "GitPython>=3.1.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "markdown>=3.4.0",
+    "jinja2>=3.1.0",
+    "tqdm>=4.64.0",
+    "colorama>=0.4.5",
+    "click>=8.1.0",
+    # MCP Server dependencies
+    "mcp[cli]>=1.9.0",
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=2.20.0",
+    "mypy>=0.950",
+    "sphinx>=5.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+]
+ml = [
+    "torch>=2.0.0",
+    "transformers>=4.20.0",
+    "opencv-python>=4.5.0",
+    "numpy>=1.21.0",
+    "pandas>=1.5.0",
+    "matplotlib>=3.5.0",
+    "seaborn>=0.11.0",
+]
+pdf = [
+    "pdfplumber>=0.7.0",
+]
+all = [
+    "mcp-comfyui-framework[dev,ml,pdf]"
+]
+
+[project.urls]
+Homepage = "https://github.com/A043-studios/mcp-comfyui-framework"
+Documentation = "https://github.com/A043-studios/mcp-comfyui-framework/wiki"
+Repository = "https://github.com/A043-studios/mcp-comfyui-framework.git"
+Issues = "https://github.com/A043-studios/mcp-comfyui-framework/issues"
+Changelog = "https://github.com/A043-studios/mcp-comfyui-framework/blob/main/CHANGELOG.md"
+
+[project.scripts]
+mcp-generate = "mcp_comfyui_framework.cli:main"
+generate-nodes = "generate_nodes:main"
+mcp-comfyui-server = "src.mcp_server:main"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "."
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+  | examples
+  | output
+)/
+'''
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--verbose",
+    "--cov=src",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "setup.py",
+    "examples/*",
+    "output/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]

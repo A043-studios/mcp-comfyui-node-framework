@@ -1,0 +1,97 @@
+{
+  "name": "@a043-studios/mcp-comfyui-node-framework",
+  "version": "2.0.0",
+  "description": "Advanced MCP server framework for automatically generating ComfyUI nodes from research papers, GitHub repositories, and other sources",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-comfyui-server": "dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepare": "npm run build",
+    "mcp:dev": "tsx src/server.ts",
+    "mcp:inspect": "npx @modelcontextprotocol/inspector tsx src/server.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "comfyui",
+    "ai-automation",
+    "code-generation",
+    "research-to-code",
+    "node-development",
+    "typescript",
+    "professional"
+  ],
+  "author": {
+    "name": "A043 Studios",
+    "email": "contact@a043studios.com",
+    "url": "https://github.com/A043-studios"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A043-studios/mcp-comfyui-node-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/A043-studios/mcp-comfyui-node-framework/issues"
+  },
+  "homepage": "https://github.com/A043-studios/mcp-comfyui-node-framework#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.2.0",
+    "jsdom": "^23.0.0",
+    "pdf-parse": "^1.1.1",
+    "puppeteer": "^21.0.0",
+    "simple-git": "^3.20.0",
+    "tar": "^6.2.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.11.0",
+    "yaml": "^2.3.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.0",
+    "@types/jsdom": "^21.1.0",
+    "@types/node": "^20.19.1",
+    "@types/pdf-parse": "^1.1.4",
+    "@types/tar": "^6.1.0",
+    "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "ts-jest": "^29.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

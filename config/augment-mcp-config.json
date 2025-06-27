@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "comfyui-framework": {
+      "command": "/Users/t.gelzleichter/Documents/augment-projects/MCP_Comfy/comfyui-node-mcp/venv/bin/python",
+      "args": ["/Users/t.gelzleichter/Documents/augment-projects/MCP_Comfy/comfyui-node-mcp/src/comfyui_node_mcp_server.py"],
+      "cwd": "/Users/t.gelzleichter/Documents/augment-projects/MCP_Comfy/comfyui-node-mcp",
+      "env": {
+        "PYTHONPATH": "/Users/t.gelzleichter/Documents/augment-projects/MCP_Comfy/comfyui-node-mcp",
+        "OPENROUTER_API_KEY": "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",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "LOG_LEVEL": "info",
+        "DEFAULT_OUTPUT_DIR": "/Users/t.gelzleichter/Documents/augment-projects/MCP_Comfy/comfyui-node-mcp/output",
+        "DEFAULT_QUALITY": "production",
+        "STORAGE_PATH": "/Users/t.gelzleichter/Documents/augment-projects/MCP_Comfy/comfyui-node-mcp/data",
+        "MAX_CONCURRENT_EXECUTIONS": "6",
+        "EXECUTION_TIMEOUT": "7200",
+        "ENABLE_ENHANCED_FRAMEWORK": "true",
+        "OPTIMIZATION_LEVEL": "standard",
+        "CACHE_TYPE": "hybrid",
+        "CACHE_DIR": "/Users/t.gelzleichter/Documents/augment-projects/MCP_Comfy/comfyui-node-mcp/cache",
+        "CACHE_MAX_SIZE": "1000",
+        "CACHE_TTL": "3600",
+        "ENABLE_LAZY_LOADING": "true",
+        "ENABLE_CACHING": "true",
+        "ENABLE_PERFORMANCE_MONITORING": "true",
+        "LLM_MODEL": "anthropic/claude-3.5-sonnet",
+        "LLM_TEMPERATURE": "0.1",
+        "LLM_MAX_TOKENS": "4000",
+        "DEPENDENCY_CACHE_DURATION": "7200",
+        "MAX_WORKERS": "8"
+      }
+    }
+  }
+}

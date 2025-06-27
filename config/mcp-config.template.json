@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "comfyui-framework": {
+      "command": "REPLACE_WITH_PYTHON_PATH",
+      "args": ["REPLACE_WITH_SERVER_PATH"],
+      "cwd": "REPLACE_WITH_INSTALL_DIR",
+      "env": {
+        "PYTHONPATH": "REPLACE_WITH_INSTALL_DIR",
+        "OPENROUTER_API_KEY": "YOUR_OPENROUTER_API_KEY_HERE",
+        "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_API_KEY_HERE",
+        "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY_HERE",
+        "LOG_LEVEL": "info",
+        "DEFAULT_OUTPUT_DIR": "REPLACE_WITH_INSTALL_DIR/output",
+        "DEFAULT_QUALITY": "production",
+        "STORAGE_PATH": "REPLACE_WITH_INSTALL_DIR/data",
+        "MAX_CONCURRENT_EXECUTIONS": "3",
+        "EXECUTION_TIMEOUT": "3600"
+      }
+    }
+  }
+}

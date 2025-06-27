@@ -1,0 +1,52 @@
+MIT License
+
+Copyright (c) 2024 A043 Studios - MCP Multi-Agent Framework for ComfyUI
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Additional Acknowledgments:
+
+This framework incorporates concepts and methodologies from:
+
+1. Model Context Protocol (MCP):
+   - Multi-agent communication framework
+   - Licensed under respective terms
+   - See: https://modelcontextprotocol.io/
+
+2. ComfyUI:
+   - Node framework and interface standards
+   - Licensed under GPL-3.0 License
+   - See: https://github.com/comfyanonymous/ComfyUI
+
+3. Research Papers and Methodologies:
+   - Various academic papers and research methodologies
+   - Please cite original papers when using generated implementations
+
+4. Open Source Libraries:
+   - PyTorch, TensorFlow, NumPy, and other ML libraries
+   - Licensed under their respective terms
+
+Users of this framework should ensure compliance with all applicable licenses
+and cite appropriate research papers when using generated implementations in
+academic or commercial applications.
+
+For questions about licensing or usage rights, please contact the maintainers
+through the project's GitHub repository.
